@@ -3,93 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Адріано Челентано</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body background="img/background.png" text="#ffffff">
+<body>
 
     <!--Тут додано трохи inline css для кращого вигляду стрічки прокручування-->
-    <marquee behavior="scroll" direction="left" style="background-color: #333; padding: 5px;">
-        <font face="Arial, sans-serif" size="4">Вітаємо на сайті, присвяченому творчості Адріано Челентано!</font>
+    <marquee behavior="scroll" direction="left" style="background-color: #333; padding: 5px; font-family: Arial, sans-serif; font-size: 1.1em;">
+        Вітаємо на сайті, присвяченому творчості Адріано Челентано!
     </marquee>
 
-    <font face="Verdana, sans-serif">
+    <h1 id="main-title">Адріано Челентано</h1>
+    <p style="text-align: center;"><i>Італійський співак, актор, режисер та громадський діяч</i></p>
+    
+    <nav class="navigation">
+        <a href="index.html"><b>Головна</b></a> | 
+        <a href="gallery.html"><b>Фотогалерея</b></a> | 
+        <a href="filmography.html"><b>Фільмографія</b></a>
+    </nav>
 
-        <h1 align="center">Адріано Челентано</h1>
-        <p align="center"><i>Італійський співак, актор, режисер та громадський діяч</i></p>
-        <p align="center">
-            <font size="4">
-                <a href="index.html" style="color: #c8c8c8;"><b>Головна</b></a> | 
-                <a href="gallery.html" style="color: #c8c8c8;"><b>Фотогалерея</b></a> | 
-                <a href="filmography.html" style="color: #c8c8c8;"><b>Фільмографія</b></a>
-            </font>
-        </p>
+    <p class="quick-links">
+        Зміст: 
+        <a href="#bio">Біографія</a> | 
+        <a href="#achievements">Досягнення</a> |
+        <a href="#discography">Дискографія</a>
+    </p>
 
-        <p align="center">
-            Зміст: 
-            <a href="#bio" style="color: #a7c5ff;">Біографія</a> | 
-            <a href="#achievements" style="color: #a7c5ff;">Досягнення</a> |
-            <a href="#discography" style="color: #a7c5ff;">Дискографія</a>
-        </p>
+    <hr>
 
-        <hr>
+    <h2 id="bio">Біографія</h2>
+    <p>
+        <b>Адріано Челентано</b> народився 6 січня 1938 року в Мілані. Він є одним з найуспішніших та найвпливовіших виконавців в історії італійської музики.
+    </p>
 
-        <h2 id="bio">Біографія</h2>
-        <p>
-            <b>Адріано Челентано</b> народився 6 січня 1938 року в Мілані. Він є одним з найуспішніших та найвпливовіших виконавців в історії італійської музики.
-        </p>
+    <h2 style="text-align: center;">Інтерактивна карта творчості</h2>
+    <p style="text-align: center;">
+        <img src="img/map.png" alt="Карта творчості" usemap="#creativityMap" style="border:0;" width="512">
+    </p>
 
-        <h2 align="center">Інтерактивна карта творчості</h2>
-        <p align="center">
-            <img src="img/map.png" alt="Карта творчості" usemap="#creativityMap" border="0" width="512">
-        </p>
+    <map name="creativityMap">
+        <!--512*287-->
+        <area shape="rect" coords="0,0,256,287" href="#achievements" alt="Музика">
+        <area shape="rect" coords="257,0,512,287" href="filmography.html" alt="Кіно">
+    </map>
 
-        <map name="creativityMap">
-            <!--512*287-->
-            <area shape="rect" coords="0,0,256,287" href="#achievements" alt="Музика">
-            
-            <area shape="rect" coords="257,0,512,287" href="filmography.html" alt="Кіно">
-        </map>
+    <h2>Творчий шлях</h2>
+    <p>
+        Свій творчий шлях Адріано розпочав з виступів у кабаре та участі в рок-н-рольних конкурсах. Його унікальний стиль та енергетика швидко принесли йому популярність.
+    </p>
 
-        <h2>Творчий шлях</h2>
-        <p>
-            Свій творчий шлях Адріано розпочав з виступів у кабаре та участі в рок-н-рольних конкурсах. Його унікальний стиль та енергетика швидко принесли йому популярність.
-        </p>
+    <h2 id="achievements">Ключові досягнення</h2>
+    <ul>
+        <li>Випустив понад 40 студійних альбомів.</li>
+        <li>Загальний тираж проданих дисків — понад 150 мільйонів.</li>
+        <li>Знявся у близько 40 кінофільмах.</li>
+        <li>Володар премії "Золотий глобус".</li>
+    </ul>
 
-        <h2 id="achievements">Ключові досягнення</h2>
-        <ul>
-            <li>Випустив понад 40 студійних альбомів.</li>
-            <li>Загальний тираж проданих дисків — понад 150 мільйонів.</li>
-            <li>Знявся у близько 40 кінофільмах.</li>
-            <li>Володар премії "Золотий глобус".</li>
-        </ul>
+    <h2 id="discography">Дискографія</h2>
+    <!--Ще один inline css стиль, його потім можна буде винести в ul li. Це потрібно щоб не було маркера.-->
+    <ul style="list-style-type: none; padding-left: 20px;">
+        <li>- La festa (1965)</li>
+        <li>- Il ragazzo della via Gluck (1966)</li>
+        <li>- Azzurro/Una carezza in un pugno (1968)</li>
+        <li>- Le robe che ha detto Adriano (1969)</li>
+    </ul>
 
-        <h2 id="discography">Дискографія</h2>
-        <ul>
-            <!--Ще один inline css стиль, його потім можна буде винести в ul li. Це потрібно щоб не було маркера.-->
-            <li style="display: inline">- La festa (1965)<br></li>
-            <li style="display: inline">- Il ragazzo della via Gluck (1966)<br></li>
-            <li style="display: inline">- Azzurro/Una carezza in un pugno (1968)<br></li>
-            <li style="display: inline">- Le robe che ha detto Adriano (1969)<br></li>
-        </ul>
+    <h2 id="filmography">Фільмографія</h2>
+    <dl>
+        <dt><b>Приборкання норовливого (1980)</b></dt>
+        <dd>Комедія про фермера, який закохується в міську дівчину.</dd>
+        <dt><b>Блеф (1976)</b></dt>
+        <dd>Кримінальна комедія про аферистів.</dd>
+        <dt><b>Бінго-Бонго (1982)</b></dt>
+        <dd>Історія про людину-мавпу, яку намагаються адаптувати до цивілізації.</dd>
+    </dl>
 
-        <h2 id="filmography">Фільмографія</h2>
-        <dl>
-            <dt><b>Приборкання норовливого (1980)</b></dt>
-            <dd>Комедія про фермера, який закохується в міську дівчину.</dd>
-            <dt><b>Блеф (1976)</b></dt>
-            <dd>Кримінальна комедія про аферистів.</dd>
-            <dt><b>Бінго-Бонго (1982)</b></dt>
-            <dd>Історія про людину-мавпу, яку намагаються адаптувати до цивілізації. </dd>
-        </dl>
+    <hr>
 
-        <hr>
+    <p style="text-align: center;">
+        &copy; 2025. Всі права умовно захищені.
+    </p>
+    <p style="text-align: center;">
+        Зв'язок з фан-клубом: <a href="mailto:celentano.fan@example.com">celentano.fan@example.com</a>
+    </p>
 
-        <p align="center">
-            &copy; 2025. Всі права умовно захищені.
-        </p>
-
-        <p align="center">
-            Зв'язок з фан-клубом: <a href="mailto:celentano.fan@example.com" style="color: #c8c8c8;">celentano.fan@example.com</a>
-        </p>
-    </font>
 </body>
 </html>
