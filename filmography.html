@@ -7,8 +7,9 @@
     <style>
         .film-table {
             border-collapse: collapse;
-            width: 90%;
+            width: 100%;
             margin: 20px auto;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
         }
         .film-table caption {
             font-size: 1.5em;
@@ -17,6 +18,7 @@
         .film-table th, .film-table td {
             border: 1px solid #ffffff;
             padding: 8px;
+            text-align: left;
         }
         .film-table thead tr {
             background-color: #333333;
@@ -26,67 +28,70 @@
             text-align: center;
             font-weight: bold;
         }
-        .film-table tbody tr {
-            background-color: #4d5941;
-        }
+        .film-table tbody tr:nth-child(even) { background-color: #4d5941; }
+        .film-table tbody tr:nth-child(odd) { background-color: #415950; }
     </style>
 </head>
 <body>
-    <h1>Детальна Фільмографія</h1>
-    <nav class="navigation">
-        <a href="index.html"><b>Головна</b></a> | 
-        <a href="gallery.html"><b>Фотогалерея</b></a> | 
-        <a href="filmography.html"><b>Фільмографія</b></a>
-    </nav>
+    <header>
+        <h1>Детальна Фільмографія</h1>
+        <nav>
+            <a href="index.html"><b>Головна</b></a> | 
+            <a href="gallery.html"><b>Фотогалерея</b></a> | 
+            <a href="filmography.html"><b>Фільмографія</b></a>
+        </nav>
+    </header>
+    
+    <main>
+        <table class="film-table">
+            <caption>Основні роботи в кіно</caption>
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Рік</th>
+                    <th>Назва фільму</th>
+                    <th style="width: 25%;">Роль</th>
+                    <th style="width: 25%;">Примітки</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td colspan="4" class="subheader">Найвідоміші комедії</td></tr>
+                <tr>
+                    <td style="text-align: center;">1976</td>
+                    <td>Блеф (Bluff - storia di truffe e di imbroglioni)</td>
+                    <td>Фелікс</td>
+                    <td>Премія "Давид ді Донателло"</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">1980</td>
+                    <td>Приборкання норовливого (Il bisbetico domato)</td>
+                    <td>Елія</td>
+                    <td>Один з найкасовіших фільмів в Італії</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">1981</td>
+                    <td>Шалено закоханий (Innamorato pazzo)</td>
+                    <td>Барнаба Чіккіні</td>
+                    <td>Лідер прокату 1981-1982 років</td>
+                </tr>
+                <tr><td colspan="4" class="subheader">Інші знакові ролі</td></tr>
+                <tr>
+                    <td style="text-align: center;">1968</td>
+                    <td>Серафіно (Serafino)</td>
+                    <td>Серафіно</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">1982</td>
+                    <td>Бінго-Бонго (Bingo Bongo)</td>
+                    <td>Бінго-Бонго</td>
+                    <td>Соціальна сатира</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 
-    <table class="film-table">
-        <caption>Основні роботи в кіно</caption>
-        <thead>
-            <tr>
-                <th style="width: 15%;">Рік</th>
-                <th>Назва фільму</th>
-                <th style="width: 25%;">Роль</th>
-                <th style="width: 25%;">Примітки</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td colspan="4" class="subheader">Найвідоміші комедії</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">1976</td>
-                <td>Блеф (Bluff - storia di truffe e di imbroglioni)</td>
-                <td>Фелікс</td>
-                <td>Премія "Давид ді Донателло"</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">1980</td>
-                <td>Приборкання норовливого (Il bisbetico domato)</td>
-                <td>Елія</td>
-                <td>Один з найкасовіших фільмів в Італії</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">1981</td>
-                <td>Шалено закоханий (Innamorato pazzo)</td>
-                <td>Барнаба Чіккіні</td>
-                <td>Лідер прокату 1981-1982 років</td>
-            </tr>
-            <tr>
-                <td colspan="4" class="subheader">Інші знакові ролі</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">1968</td>
-                <td>Серафіно (Serafino)</td>
-                <td>Серафіно</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">1982</td>
-                <td>Бінго-Бонго (Bingo Bongo)</td>
-                <td>Бінго-Бонго</td>
-                <td>Соціальна сатира</td>
-            </tr>
-        </tbody>
-    </table>
+    <footer>
+        <p>&copy; 2025. Всі права умовно захищені.</p>
+    </footer>
 </body>
 </html>

@@ -5,42 +5,44 @@
     <title>Фотогалерея - Адріано Челентано</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        h1 {
-            color: #a7c5ff;
-        }
+        h1 { color: #a7c5ff; }
     </style>
 </head>
 <body>
-    <h1>Фотогалерея</h1>
-    <nav class="navigation">
-        <a href="index.html"><b>Головна</b></a> | 
-        <a href="gallery.html"><b>Фотогалерея</b></a> | 
-        <a href="filmography.html"><b>Фільмографія</b></a>
-    </nav>
-
-    <hr class="hr-yellow">
+    <header>
+        <h1>Фотогалерея</h1>
+        <nav>
+            <a href="index.html"><b>Головна</b></a> | 
+            <a href="gallery.html"><b>Фотогалерея</b></a> | 
+            <a href="filmography.html"><b>Фільмографія</b></a>
+        </nav>
+    </header>
     
-    <div class="gallery-item">
-        <img src="img/chelentano1.jpg" alt="Фотографія Челентано">
-        <p><i>Челентано прибув з армії для виступу в Санремо</i></p>
-    </div>
+    <main>
+        <section class="gallery-item">
+            <!-- <hr class="hr-yellow"> -->
+            <img src="img/chelentano1.jpg" alt="Фотографія Челентано">
+            <p><i>Челентано прибув з армії для виступу в Санремо</i></p>
+        </section>
 
-    <hr class="hr-green">
+        <section class="gallery-item">
+            <!-- <hr class="hr-green"> -->
+            <img src="img/chelentano2.jpg" alt="Фотографія Челентано">
+            <p><i>Виступ Челентано спиною до публіки в Санремо, що викликало обурення журі</i></p>
+        </section>
 
-    <div class="gallery-item">
-        <img src="img/chelentano2.jpg" alt="Фотографія Челентано">
-        <p><i>Виступ Челентано спиною до публіки в Санремо, що викликало обурення журі</i></p>
-    </div>
+        <section class="gallery-item">
+            <!-- <hr class="hr-blue"> -->
+            <a href="filmography.html">
+                <img src="img/chelentano3.png" alt="Фотографія Челентано" style="border:0;">
+            </a>
+            <p><i>Челентано під час виконання пісні «Don't Play That Song» (натисніть для перегляду фільмографії)</i></p>
+            <!-- <hr class="hr-red"> -->
+        </section>
+    </main>
 
-    <hr class="hr-blue">
-
-    <div class="gallery-item">
-        <a href="filmography.html">
-            <img src="img/chelentano3.png" alt="Фотографія Челентано" style="border:0;">
-        </a>
-        <p><i>Челентано під час виконання пісні «Don't Play That Song» (натисніть для перегляду фільмографії)</i></p>
-    </div>
-
-    <hr class="hr-red">
+    <footer>
+        <p>&copy; 2025. Всі права умовно захищені.</p>
+    </footer>
 </body>
 </html>

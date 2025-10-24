@@ -6,16 +6,18 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="main-content">
 
+    <header>
         <marquee behavior="scroll" direction="left" style="background-color: #333; padding: 10px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 1.1em;">
             Вітаємо на сайті, присвяченому творчості Адріано Челентано!
         </marquee>
-
         <h1 id="main-title">Адріано Челентано</h1>
         <p style="text-align: center;"><i>Італійський співак, актор, режисер та громадський діяч</i></p>
-        
-        <nav class="navigation">
+    </header>
+
+    <main>
+        <!--nav має бути насправді в header, але для кращого вигляду він поміщений в main, щоб залишити в header тільки важливу інформацію-->
+        <nav>
             <a href="index.html"><b>Головна</b></a> | 
             <a href="gallery.html"><b>Фотогалерея</b></a> | 
             <a href="filmography.html"><b>Фільмографія</b></a>
@@ -30,72 +32,78 @@
 
         <hr>
 
-        <h2 id="bio">Біографія</h2>
-        <p>
-            <b>Адріано Челентано</b> народився 6 січня 1938 року в Мілані. Він є одним з найуспішніших та найвпливовіших виконавців в історії італійської музики.
-        </p>
-        
-        <div class="cards-container">
-            <div class="info-card">
-                <h3>Музична кар'єра</h3>
-                <p>Челентано відомий своїм унікальним стилем та хрипким голосом. Його музика поєднує рок-н-рол, поп та авторську пісню. Такі хіти, як "Azzurro" та "Il Ragazzo della Via Gluck", стали символами цілої епохи в Італії.</p>
-            </div>
-            <div class="info-card">
-                <h3>Акторський талант</h3>
-                <p>Як актор, він прославився завдяки своїй харизмі та комедійному таланту. Фільми "Приборкання норовливого" та "Блеф" стали міжнародними хітами і досі залишаються улюбленими для багатьох глядачів.</p>
-            </div>
-        </div>
+        <article id="bio">
+            <h2>Біографія</h2>
+            <p><b>Адріано Челентано</b> народився 6 січня 1938 року в Мілані. Він є одним з найуспішніших та найвпливовіших виконавців в історії італійської музики.</p>
+            
+            <section class="cards-container">
+                <div class="info-card">
+                    <h3>Музична кар'єра</h3>
+                    <p>Челентано відомий своїм унікальним стилем та хрипким голосом. Його музика поєднує рок-н-рол, поп та авторську пісню.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Акторський талант</h3>
+                    <p>Як актор, він прославився завдяки своїй харизмі та комедійному таланту. Фільми "Приборкання норовливого" та "Блеф" стали міжнародними хітами.</p>
+                </div>
+            </section>
+        </article>
 
-        <h2 style="text-align: center;">Інтерактивна карта творчості</h2>
-        <p style="text-align: center;">
-            <img src="img/map.png" alt="Карта творчості" usemap="#creativityMap" style="border:0;" width="512">
-        </p>
+        <section>
+            <h2 style="text-align: center;">Інтерактивна карта творчості</h2>
+            <p style="text-align: center;">
+                <img src="img/map.png" alt="Карта творчості" usemap="#creativityMap" style="border:0;" width="512">
+            </p>
+            <map name="creativityMap">
+                <!--512*287-->
+                <area shape="rect" coords="0,0,256,287" href="#achievements" alt="Музика">
+                <area shape="rect" coords="257,0,512,287" href="filmography.html" alt="Кіно">
+            </map>
+        </section>
 
-        <map name="creativityMap">
-            <!--512*287-->
-            <area shape="rect" coords="0,0,256,287" href="#achievements" alt="Музика">
-            <area shape="rect" coords="257,0,512,287" href="filmography.html" alt="Кіно">
-        </map>
+        <section>
+            <h2>Творчий шлях</h2>
+            <p>Свій творчий шлях Адріано розпочав з виступів у кабаре та участі в рок-н-рольних конкурсах. Його унікальний стиль та енергетика швидко принесли йому популярність.</p>
+        </section>
 
-        <h2>Творчий шлях</h2>
-        <p>
-            Свій творчий шлях Адріано розпочав з виступів у кабаре та участі в рок-н-рольних конкурсах. Його унікальний стиль та енергетика швидко принесли йому популярність.
-        </p>
+        <section id="achievements">
+            <h2>Ключові досягнення</h2>
+            <ul>
+                <li>Випустив понад 40 студійних альбомів.</li>
+                <li>Загальний тираж проданих дисків — понад 150 мільйонів.</li>
+                <li>Знявся у близько 40 кінофільмах.</li>
+                <li>Володар премії "Золотий глобус".</li>
+            </ul>
+        </section>
 
-        <h2 id="achievements">Ключові досягнення</h2>
-        <ul>
-            <li>Випустив понад 40 студійних альбомів.</li>
-            <li>Загальний тираж проданих дисків — понад 150 мільйонів.</li>
-            <li>Знявся у близько 40 кінофільмах.</li>
-            <li>Володар премії "Золотий глобус".</li>
-        </ul>
+        <section id="discography">
+            <h2>Дискографія</h2>
+            <!--Ще один inline css стиль, його потім можна буде винести в ul li. Це потрібно щоб не було маркера.-->
+            <ul style="list-style-type: none; padding-left: 20px; text-align: left;">
+                <li>- La festa (1965)</li>
+                <li>- Il ragazzo della via Gluck (1966)</li>
+                <li>- Azzurro/Una carezza in un pugno (1968)</li>
+                <li>- Le robe che ha detto Adriano (1969)</li>
+            </ul>
+        </section>
 
-        <h2 id="discography">Дискографія</h2>
-        <ul style="list-style-type: none; padding-left: 20px; text-align: left;">
-            <li>- La festa (1965)</li>
-            <li>- Il ragazzo della via Gluck (1966)</li>
-            <li>- Azzurro/Una carezza in un pugno (1968)</li>
-            <li>- Le robe che ha detto Adriano (1969)</li>
-        </ul>
+        <section id="filmography_short">
+            <h2>Фільмографія</h2>
+            <dl>
+                <dt><b>Приборкання норовливого (1980)</b></dt>
+                <dd>Комедія про фермера, який закохується в міську дівчину.</dd>
+                <dt><b>Блеф (1976)</b></dt>
+                <dd>Кримінальна комедія про аферистів.</dd>
+                <dt><b>Бінго-Бонго (1982)</b></dt>
+                <dd>Історія про людину-мавпу, яку намагаються адаптувати до цивілізації.</dd>
+            </dl>
+        </section>
 
-        <h2 id="filmography">Фільмографія</h2>
-        <dl>
-            <dt><b>Приборкання норовливого (1980)</b></dt>
-            <dd>Комедія про фермера, який закохується в міську дівчину.</dd>
-            <dt><b>Блеф (1976)</b></dt>
-            <dd>Кримінальна комедія про аферистів.</dd>
-            <dt><b>Бінго-Бонго (1982)</b></dt>
-            <dd>Історія про людину-мавпу, яку намагаються адаптувати до цивілізації.</dd>
-        </dl>
+    </main>
 
-        <hr>
+    <footer>
+        <p>&copy; 2025. Всі права умовно захищені.</p>
+        <p>Зв'язок з фан-клубом: <a href="mailto:celentano.fan@example.com">celentano.fan@example.com</a></p>
+    </footer>
 
-        <p style="text-align: center;">
-            &copy; 2025. Всі права умовно захищені.
-        </p>
-        <p style="text-align: center;">
-            Зв'язок з фан-клубом: <a href="mailto:celentano.fan@example.com">celentano.fan@example.com</a>
-        </p>
-    </div>
 </body>
 </html>
